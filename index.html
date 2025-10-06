@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander Store - Plataforma de Streaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                Wander Store
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
+                    <li><a href="#productos" class="nav-link" data-section="productos">Productos</a></li>
+                    <li><a href="#puntos" class="nav-link" data-section="puntos">Puntos</a></li>
+                    <li><a href="#soporte" class="nav-link" data-section="soporte">Soporte</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" id="login-btn">Iniciar Sesión</a>
+                <a href="#" class="btn" id="register-btn">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero main-section active">
+        <div class="hero-content">
+            <h1>WANDER STORE</h1>
+            <p>La mejor plataforma para adquirir cuentas premium de streaming a precios increíbles</p>
+            <div class="points-display">
+                <i class="fas fa-coins"></i>
+                <span id="user-points">0 Puntos</span>
+            </div>
+            <a href="#productos" class="btn nav-link" data-section="productos">Ver Productos</a>
+            <a href="#puntos" class="btn btn-outline nav-link" data-section="puntos">Comprar Puntos</a>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="main-section">
+        <div class="container">
+            <h2 class="section-title">NUESTROS PRODUCTOS</h2>
+            <div class="products-grid">
+                <!-- Netflix -->
+                <div class="product-card">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-icon netflix">
+                        <div class="netflix-logo">N</div>
+                    </div>
+                    <h3>Netflix Solo Perfil</h3>
+                    <p>Acceso a un perfil exclusivo en cuenta premium</p>
+                    <div class="product-price">Desde 150 pts</div>
+                    <button class="btn btn-outline view-product" data-product="netflix">Ver Detalles</button>
+                </div>
+                
+                <!-- Disney+ -->
+                <div class="product-card">
+                    <div class="product-icon disney">
+                        <i class="fas fa-crown fa-3x"></i>
+                    </div>
+                    <h3>Disney+ Premium</h3>
+                    <p>Acceso completo a Disney+, Star+ y ESPN</p>
+                    <div class="product-price">Desde 200 pts</div>
+                    <button class="btn btn-outline view-product" data-product="disney">Ver Detalles</button>
+                </div>
+                
+                <!-- HBO Max -->
+                <div class="product-card">
+                    <div class="product-icon max">
+                        <i class="fab fa-hbo fa-3x"></i>
+                    </div>
+                    <h3>Max Platino</h3>
+                    <p>Todo el contenido de HBO Max en calidad 4K</p>
+                    <div class="product-price">Desde 180 pts</div>
+                    <button class="btn btn-outline view-product" data-product="max">Ver Detalles</button>
+                </div>
+                
+                <!-- Paramount+ -->
+                <div class="product-card">
+                    <div class="product-icon paramount">
+                        <i class="fas fa-mountain fa-3x"></i>
+                    </div>
+                    <h3>Paramount+</h3>
+                    <p>Series y películas exclusivas de Paramount</p>
+                    <div class="product-price">Desde 120 pts</div>
+                    <button class="btn btn-outline view-product" data-product="paramount">Ver Detalles</button>
+                </div>
+                
+                <!-- Spotify -->
+                <div class="product-card">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-icon spotify">
+                        <i class="fab fa-spotify fa-3x"></i>
+                    </div>
+                    <h3>Spotify Premium</h3>
+                    <p>1, 2 o 3 meses de Spotify sin anuncios</p>
+                    <div class="product-price">Desde 80 pts</div>
+                    <button class="btn btn-outline view-product" data-product="spotify">Ver Detalles</button>
+                </div>
+                
+                <!-- YouTube -->
+                <div class="product-card">
+                    <div class="product-icon youtube">
+                        <i class="fab fa-youtube fa-3x"></i>
+                    </div>
+                    <h3>YouTube Premium</h3>
+                    <p>1 mes de YouTube sin anuncios y contenido exclusivo</p>
+                    <div class="product-price">Desde 100 pts</div>
+                    <button class="btn btn-outline view-product" data-product="youtube">Ver Detalles</button>
+                </div>
+                
+                <!-- Crunchyroll -->
+                <div class="product-card">
+                    <div class="product-icon crunchyroll">
+                        <i class="fas fa-dragon fa-3x"></i>
+                    </div>
+                    <h3>Crunchyroll Premium</h3>
+                    <p>Todo el catálogo de anime sin anuncios</p>
+                    <div class="product-price">Desde 130 pts</div>
+                    <button class="btn btn-outline view-product" data-product="crunchyroll">Ver Detalles</button>
+                </div>
+                
+                <!-- Vix -->
+                <div class="product-card">
+                    <div class="product-icon vix">
+                        <i class="fas fa-tv fa-3x"></i>
+                    </div>
+                    <h3>Vix+ Premium</h3>
+                    <p>Contenido exclusivo de Televisa y Univisión</p>
+                    <div class="product-price">Desde 90 pts</div>
+                    <button class="btn btn-outline view-product" data-product="vix">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Páginas de detalles de productos -->
+    <!-- Netflix -->
+    <section id="netflix-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="netflix-logo-large">N</div>
+                    <h2>NETFLIX SOLO PERFIL</h2>
+                    <div class="price-range">$3.50 - $15.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>Netflix Solo Perfil</h2>
+                    <p>Acceso a un perfil exclusivo en cuenta premium compartida con hasta 4 perfiles adicionales.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Acceso a catálogo completo de Netflix</li>
+                        <li><i class="fas fa-check"></i> Calidad 4K Ultra HD</li>
+                        <li><i class="fas fa-check"></i> Perfil personalizado</li>
+                        <li><i class="fas fa-check"></i> Sin límite de descargas</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="150">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">150 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="400">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">400 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="750">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">750 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="12meses" data-price="1400">
+                                <div class="plan-name">12 Meses</div>
+                                <div class="plan-price">1400 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="netflix-final-price">150 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="Netflix Solo Perfil" data-points="150">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disney+ -->
+    <section id="disney-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon disney">
+                        <i class="fas fa-crown fa-5x"></i>
+                    </div>
+                    <h2>DISNEY+ PREMIUM</h2>
+                    <div class="price-range">$4.00 - $18.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>Disney+ Premium</h2>
+                    <p>Acceso completo al universo Disney con contenido de Disney+, Star+ y ESPN en un solo lugar.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Todo el contenido de Disney, Pixar, Marvel y Star Wars</li>
+                        <li><i class="fas fa-check"></i> Incluye Star+ con series y películas para adultos</li>
+                        <li><i class="fas fa-check"></i> Acceso a ESPN con eventos deportivos en vivo</li>
+                        <li><i class="fas fa-check"></i> Hasta 4 dispositivos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Calidad 4K HDR</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="200">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">200 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="550">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">550 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="1000">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">1000 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="12meses" data-price="1800">
+                                <div class="plan-name">12 Meses</div>
+                                <div class="plan-price">1800 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="disney-final-price">200 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="Disney+ Premium" data-points="200">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Max Platino -->
+    <section id="max-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon max">
+                        <i class="fab fa-hbo fa-5x"></i>
+                    </div>
+                    <h2>MAX PLATINO</h2>
+                    <div class="price-range">$3.80 - $16.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>Max Platino</h2>
+                    <p>La experiencia definitiva de HBO Max con todo el contenido en la máxima calidad disponible.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Todo el catálogo de HBO, Warner Bros y DC</li>
+                        <li><i class="fas fa-check"></i> Calidad 4K Ultra HD con Dolby Atmos</li>
+                        <li><i class="fas fa-check"></i> Hasta 3 dispositivos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Descargas ilimitadas para ver offline</li>
+                        <li><i class="fas fa-check"></i> Estrenos exclusivos el mismo día que en cines</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="180">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">180 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="500">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">500 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="900">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">900 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="12meses" data-price="1600">
+                                <div class="plan-name">12 Meses</div>
+                                <div class="plan-price">1600 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="max-final-price">180 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="Max Platino" data-points="180">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paramount+ -->
+    <section id="paramount-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon paramount">
+                        <i class="fas fa-mountain fa-5x"></i>
+                    </div>
+                    <h2>PARAMOUNT+</h2>
+                    <div class="price-range">$2.50 - $12.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>Paramount+</h2>
+                    <p>Disfruta de miles de episodios de series, películas y contenido original de Paramount.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Series exclusivas de CBS, Showtime y MTV</li>
+                        <li><i class="fas fa-check"></i> Películas de Paramount Pictures</li>
+                        <li><i class="fas fa-check"></i> Contenido infantil de Nickelodeon</li>
+                        <li><i class="fas fa-check"></i> Eventos deportivos en vivo</li>
+                        <li><i class="fas fa-check"></i> Hasta 3 dispositivos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="120">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">120 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="330">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">330 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="600">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">600 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="12meses" data-price="1100">
+                                <div class="plan-name">12 Meses</div>
+                                <div class="plan-price">1100 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="paramount-final-price">120 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="Paramount+" data-points="120">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotify -->
+    <section id="spotify-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon spotify">
+                        <i class="fab fa-spotify fa-5x"></i>
+                    </div>
+                    <h2>SPOTIFY PREMIUM</h2>
+                    <div class="price-range">$2.00 - $10.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>Spotify Premium</h2>
+                    <p>Escucha música sin anuncios, descarga canciones y disfruta de una experiencia musical sin límites.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Música sin anuncios</li>
+                        <li><i class="fas fa-check"></i> Descarga ilimitada de canciones</li>
+                        <li><i class="fas fa-check"></i> Reproducción en cualquier orden</li>
+                        <li><i class="fas fa-check"></i> Calidad de audio mejorada</li>
+                        <li><i class="fas fa-check"></i> Acceso a millones de canciones y podcasts</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="80">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">80 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="2meses" data-price="150">
+                                <div class="plan-name">2 Meses</div>
+                                <div class="plan-price">150 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="220">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">220 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="400">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">400 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="spotify-final-price">80 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="Spotify Premium" data-points="80">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Premium -->
+    <section id="youtube-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon youtube">
+                        <i class="fab fa-youtube fa-5x"></i>
+                    </div>
+                    <h2>YOUTUBE PREMIUM</h2>
+                    <div class="price-range">$2.50 - $12.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>YouTube Premium</h2>
+                    <p>Disfruta de YouTube sin anuncios, descarga videos y reproduce contenido en segundo plano.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> YouTube sin anuncios</li>
+                        <li><i class="fas fa-check"></i> Descarga de videos para ver offline</li>
+                        <li><i class="fas fa-check"></i> Reproducción en segundo plano</li>
+                        <li><i class="fas fa-check"></i> Acceso a YouTube Music Premium</li>
+                        <li><i class="fas fa-check"></i> Contenido original de YouTube</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="100">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">100 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="280">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">280 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="500">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">500 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="12meses" data-price="900">
+                                <div class="plan-name">12 Meses</div>
+                                <div class="plan-price">900 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="youtube-final-price">100 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="YouTube Premium" data-points="100">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crunchyroll -->
+    <section id="crunchyroll-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon crunchyroll">
+                        <i class="fas fa-dragon fa-5x"></i>
+                    </div>
+                    <h2>CRUNCHYROLL PREMIUM</h2>
+                    <div class="price-range">$3.00 - $14.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>Crunchyroll Premium</h2>
+                    <p>El hogar del anime más grande del mundo. Accede a miles de episodios sin anuncios y en la mejor calidad.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Catálogo más grande de anime</li>
+                        <li><i class="fas fa-check"></i> Sin anuncios</li>
+                        <li><i class="fas fa-check"></i> Simulcasts el mismo día que en Japón</li>
+                        <li><i class="fas fa-check"></i> Manga digital incluido</li>
+                        <li><i class="fas fa-check"></i> Hasta 4 dispositivos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Garantía de 30 días</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Selecciona tu plan:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="130">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">130 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="360">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">360 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="6meses" data-price="650">
+                                <div class="plan-name">6 Meses</div>
+                                <div class="plan-price">650 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="12meses" data-price="1200">
+                                <div class="plan-name">12 Meses</div>
+                                <div class="plan-price">1200 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="crunchyroll-final-price">130 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="Crunchyroll Premium" data-points="130">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vix+ -->
+    <section id="vix-detail" class="product-detail">
+        <div class="container">
+            <a href="#" class="back-btn" data-back="productos">
+                <i class="fas fa-arrow-left"></i> Volver a Productos
+            </a>
+            <div class="detail-container">
+                <div class="product-image">
+                    <div class="product-icon vix">
+                        <i class="fas fa-tv fa-5x"></i>
+                    </div>
+                    <h2>VIX+ COMPLETA PREMIUM</h2>
+                    <div class="price-range">$3.50 - $20.00</div>
+                </div>
+                <div class="product-info">
+                    <h2>VIX+ Completa Premium</h2>
+                    <p>Acceso completo a VIX+ con todos los beneficios premium.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Este producto da acceso a 5 perfiles</li>
+                        <li><i class="fas fa-check"></i> Puede reproducir 4 dispositivos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Garantía en todos los planes</li>
+                        <li><i class="fas fa-check"></i> Contenido exclusivo de Televisa y Univisión</li>
+                        <li><i class="fas fa-check"></i> Ser responsable en el uso de la cuenta</li>
+                        <li><i class="fas fa-times"></i> En caso de robo no hay garantía</li>
+                    </ul>
+                    
+                    <div class="plan-selection">
+                        <h3>Plan de VIX:</h3>
+                        <div class="plan-options">
+                            <div class="plan-option" data-plan="1mes" data-price="90">
+                                <div class="plan-name">1 Mes</div>
+                                <div class="plan-price">90 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="2meses" data-price="170">
+                                <div class="plan-name">2 Meses</div>
+                                <div class="plan-price">170 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="3meses" data-price="250">
+                                <div class="plan-name">3 Meses</div>
+                                <div class="plan-price">250 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="5meses" data-price="400">
+                                <div class="plan-name">5 Meses</div>
+                                <div class="plan-price">400 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="anual6m" data-price="700">
+                                <div class="plan-name">Anual 6M</div>
+                                <div class="plan-price">700 pts</div>
+                            </div>
+                            <div class="plan-option" data-plan="anual9m" data-price="1000">
+                                <div class="plan-name">Anual 9M</div>
+                                <div class="plan-price">1000 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-price">
+                        Precio final: <span id="vix-final-price">90 pts</span>
+                    </div>
+                    
+                    <button class="btn checkout-btn buy-product-detail" data-product="VIX+ Completa Premium" data-points="90">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de compra de puntos -->
+    <section id="puntos" class="points-section main-section">
+        <div class="container">
+            <h2 class="section-title">COMPRAR PUNTOS</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem; color: #ccc;">
+                Adquiere puntos para canjear por tus plataformas de streaming favoritas
+            </p>
+            
+            <!-- Opciones de puntos predeterminadas -->
+            <div class="points-grid" id="points-grid">
+                <!-- 50 Puntos -->
+                <div class="point-card" data-points="50" data-price="5.00">
+                    <div class="point-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="point-amount">50 Puntos</div>
+                    <div class="point-price">$5.00 USD</div>
+                    <div class="point-bonus">+0 puntos extra</div>
+                    <button class="btn btn-outline select-points">Seleccionar</button>
+                </div>
+                
+                <!-- 100 Puntos -->
+                <div class="point-card" data-points="100" data-price="9.00">
+                    <div class="point-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="point-amount">100 Puntos</div>
+                    <div class="point-price">$9.00 USD</div>
+                    <div class="point-bonus">+5 puntos extra</div>
+                    <button class="btn btn-outline select-points">Seleccionar</button>
+                </div>
+                
+                <!-- 200 Puntos -->
+                <div class="point-card" data-points="200" data-price="16.00">
+                    <div class="point-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="point-amount">200 Puntos</div>
+                    <div class="point-price">$16.00 USD</div>
+                    <div class="point-bonus">+15 puntos extra</div>
+                    <button class="btn btn-outline select-points">Seleccionar</button>
+                </div>
+                
+                <!-- 500 Puntos -->
+                <div class="point-card" data-points="500" data-price="35.00">
+                    <div class="point-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="point-amount">500 Puntos</div>
+                    <div class="point-price">$35.00 USD</div>
+                    <div class="point-bonus">+50 puntos extra</div>
+                    <button class="btn btn-outline select-points">Seleccionar</button>
+                </div>
+                
+                <!-- 1000 Puntos -->
+                <div class="point-card" data-points="1000" data-price="65.00">
+                    <div class="point-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="point-amount">1000 Puntos</div>
+                    <div class="point-price">$65.00 USD</div>
+                    <div class="point-bonus">+120 puntos extra</div>
+                    <button class="btn btn-outline select-points">Seleccionar</button>
+                </div>
+                
+                <!-- 2000 Puntos -->
+                <div class="point-card" data-points="2000" data-price="120.00">
+                    <div class="point-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="point-amount">2000 Puntos</div>
+                    <div class="point-price">$120.00 USD</div>
+                    <div class="point-bonus">+300 puntos extra</div>
+                    <button class="btn btn-outline select-points">Seleccionar</button>
+                </div>
+            </div>
+            
+            <!-- Puntos personalizados -->
+            <div class="custom-points">
+                <h3>¿Necesitas una cantidad específica?</h3>
+                <div class="custom-input-group">
+                    <label for="custom-points">Puntos que quiero adquirir:</label>
+                    <input type="number" id="custom-points" min="10" max="10000" value="1500" step="10">
+                </div>
+                <div class="custom-price">
+                    Precio estimado: <span id="custom-price">$97.50 USD</span>
+                </div>
+                
+                <!-- Métodos de pago -->
+                <div class="payment-methods">
+                    <h3>Selecciona tu método de pago</h3>
+                    <div class="payment-options">
+                        <div class="payment-option" data-method="paypal">
+                            <div class="payment-icon">
+                                <i class="fab fa-paypal"></i>
+                            </div>
+                            <div class="payment-name">PayPal</div>
+                        </div>
+                        <div class="payment-option" data-method="credit-card">
+                            <div class="payment-icon">
+                                <i class="far fa-credit-card"></i>
+                            </div>
+                            <div class="payment-name">Tarjeta</div>
+                        </div>
+                        <div class="payment-option" data-method="crypto">
+                            <div class="payment-icon">
+                                <i class="fab fa-bitcoin"></i>
+                            </div>
+                            <div class="payment-name">Cripto</div>
+                        </div>
+                        <div class="payment-option" data-method="transfer">
+                            <div class="payment-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="payment-name">Transferencia</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn checkout-btn" id="checkout-btn">Proceder al Pago</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Soporte -->
+    <section id="soporte" class="support-section main-section">
+        <div class="container">
+            <h2 class="section-title">CENTRO DE SOPORTE</h2>
+            
+            <!-- Navegación de soporte -->
+            <div class="support-nav">
+                <a href="#" class="btn btn-outline support-nav-btn" data-target="centro-ayuda">Centro de Ayuda</a>
+                <a href="#" class="btn btn-outline support-nav-btn" data-target="preguntas-frecuentes">Preguntas Frecuentes</a>
+                <a href="#" class="btn btn-outline support-nav-btn" data-target="contacto">Contacto</a>
+                <a href="#" class="btn btn-outline support-nav-btn" data-target="terminos">Términos de Servicio</a>
+                <a href="#" class="btn btn-outline support-nav-btn" data-target="privacidad">Política de Privacidad</a>
+            </div>
+            
+            <!-- Centro de Ayuda -->
+            <div id="centro-ayuda" class="support-content active">
+                <h2 style="color: var(--accent); margin-bottom: 20px;">Centro de Ayuda</h2>
+                <p class="support-description">
+                    Guía completa para solucionar problemas comunes, tutoriales y consejos para optimizar la experiencia de uso de la plataforma.
+                </p>
+                
+                <h3 style="color: var(--accent); margin: 30px 0 15px;">Contenido Sugerido</h3>
+                <ul class="support-list">
+                    <li><i class="fas fa-cog"></i> Artículos sobre cómo configurar la cuenta</li>
+                    <li><i class="fas fa-tools"></i> Solución de problemas de reproducción y conexión</li>
+                    <li><i class="fas fa-mobile-alt"></i> Guías para usar las funciones de la app (descargas, listas de reproducción)</li>
+                    <li><i class="fas fa-wifi"></i> Optimización de velocidad de conexión para streaming</li>
+                    <li><i class="fas fa-user-shield"></i> Configuración de privacidad y seguridad</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Gestión de suscripciones y métodos de pago</li>
+                </ul>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <p>¿No encuentras lo que buscas? <a href="#" class="support-nav-btn" data-target="contacto" style="color: var(--accent);">Contáctanos directamente</a></p>
+                </div>
+            </div>
+            
+            <!-- Preguntas Frecuentes -->
+            <div id="preguntas-frecuentes" class="support-content">
+                <h2 style="color: var(--accent); margin-bottom: 20px;">Preguntas Frecuentes (FAQ)</h2>
+                <p class="support-description">
+                    Respuestas rápidas a las preguntas más habituales de los usuarios.
+                </p>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo me suscribo al servicio?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para suscribirte a nuestros servicios, primero necesitas crear una cuenta en Wander Store. Luego, puedes comprar puntos a través de nuestra sección "Comprar Puntos" y canjearlos por cualquiera de las plataformas de streaming disponibles. Una vez que adquieras un producto, recibirás las credenciales de acceso por correo electrónico en un plazo máximo de 24 horas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué dispositivos son compatibles?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nuestras cuentas de streaming son compatibles con la mayoría de dispositivos: Smart TVs, consolas de videojuegos (PlayStation, Xbox), dispositivos de streaming (Fire TV, Roku, Chromecast), computadoras (Windows, Mac), y dispositivos móviles (iOS, Android). La compatibilidad específica puede variar según la plataforma de streaming.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo cancelo mi suscripción?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>En Wander Store no manejamos suscripciones recurrentes. Todas las compras son por tiempo específico (1 mes, 3 meses, etc.). Una vez que expire el período contratado, el servicio se cancelará automáticamente. Si deseas renovar, simplemente adquiere el producto nuevamente con tus puntos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué hago si olvidé mi contraseña?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si olvidaste tu contraseña de Wander Store, puedes restablecerla haciendo clic en "Iniciar Sesión" y luego en "¿Olvidaste tu contraseña?". Recibirás un enlace de restablecimiento en tu correo electrónico. Para las cuentas de streaming que hayas adquirido, no es posible restablecer contraseñas ya que son cuentas compartidas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contacto -->
+            <div id="contacto" class="support-content">
+                <h2 style="color: var(--accent); margin-bottom: 20px;">Contacto</h2>
+                <p class="support-description">
+                    Información para que los usuarios puedan comunicarse directamente con el equipo de soporte.
+                </p>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Correo Electrónico</h3>
+                        <p>soporte@wanderstore.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Teléfono</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 10:00 - 14:00</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Chat en Vivo</h3>
+                        <p>Disponible 24/7</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: var(--accent); margin: 30px 0 15px;">Formulario de Contacto</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Nombre Completo</label>
+                            <input type="text" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Correo Electrónico</label>
+                            <input type="email" id="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Asunto</label>
+                            <input type="text" id="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Mensaje</label>
+                            <textarea id="contact-message" rows="5" style="width: 100%; padding: 12px 15px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white; font-size: 1rem;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Términos de Servicio -->
+            <div id="terminos" class="support-content">
+                <h2 style="color: var(--accent); margin-bottom: 20px;">Términos de Servicio</h2>
+                <p class="support-description">
+                    Documento legal que detalla las reglas y condiciones de uso de la plataforma.
+                </p>
+                
+                <div class="legal-content">
+                    <h3>1. Aceptación de los Términos</h3>
+                    <p>Al acceder y utilizar Wander Store, aceptas cumplir con estos Términos de Servicio y todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, queda prohibido el uso o acceso a esta plataforma.</p>
+                    
+                    <h3>2. Derechos y Responsabilidades del Usuario</h3>
+                    <p>Como usuario de Wander Store, tienes derecho a acceder a los servicios ofrecidos, siempre que cumplas con estas condiciones. Eres responsable de mantener la confidencialidad de tu cuenta y contraseña, y de restringir el acceso a tu dispositivo.</p>
+                    
+                    <h3>3. Políticas de Uso Aceptable</h3>
+                    <p>Queda estrictamente prohibido utilizar Wander Store para cualquier propósito ilegal o no autorizado. No puedes violar ninguna ley en tu jurisdicción, incluyendo pero no limitado a leyes de derechos de autor.</p>
+                    
+                    <h3>4. Propiedad Intelectual</h3>
+                    <p>Todo el contenido incluido en Wander Store, como texto, gráficos, logotipos, imágenes, así como el compilado de los mismos, es propiedad de Wander Store o de sus proveedores de contenido y está protegido por las leyes de derechos de autor.</p>
+                    
+                    <h3>5. Limitación de Responsabilidad</h3>
+                    <p>Wander Store no será responsable de ningún daño directo, indirecto, incidental, especial, consecuente o puntivo que resulte del uso o la imposibilidad de uso de nuestros servicios.</p>
+                    
+                    <h3>6. Modificaciones de los Términos</h3>
+                    <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Te notificaremos sobre cambios significativos publicando la nueva versión en nuestro sitio web. El uso continuado del servicio después de dichos cambios constituye tu aceptación de los nuevos términos.</p>
+                </div>
+            </div>
+            
+            <!-- Política de Privacidad -->
+            <div id="privacidad" class="support-content">
+                <h2 style="color: var(--accent); margin-bottom: 20px;">Política de Privacidad</h2>
+                <p class="support-description">
+                    Información sobre cómo la plataforma recopila, utiliza y protege los datos personales de los usuarios.
+                </p>
+                
+                <div class="legal-content">
+                    <h3>1. Información que Recopilamos</h3>
+                    <p>Recopilamos información que nos proporcionas directamente cuando creas una cuenta, realizas una compra o te comunicas con nosotros. Esto puede incluir tu nombre, dirección de correo electrónico, información de pago y cualquier otra información que decidas proporcionar.</p>
+                    
+                    <h3>2. Cómo Utilizamos tu Información</h3>
+                    <p>Utilizamos la información que recopilamos para:
+                    <ul class="support-list">
+                        <li><i class="fas fa-check"></i> Proporcionar, mantener y mejorar nuestros servicios</li>
+                        <li><i class="fas fa-check"></i> Procesar transacciones y enviar información relacionada</li>
+                        <li><i class="fas fa-check"></i> Enviar mensajes administrativos, actualizaciones y alertas de seguridad</li>
+                        <li><i class="fas fa-check"></i> Responder a tus comentarios, preguntas y solicitudes de servicio al cliente</li>
+                    </ul>
+                    </p>
+                    
+                    <h3>3. Compartición de Información</h3>
+                    <p>No vendemos, comerciamos ni transferimos de otro modo tu información personal a terceros. Esto no incluye a socios de confianza que nos ayudan a operar nuestro sitio web, realizar nuestros negocios o prestarte servicios, siempre que esas partes acepten mantener esta información confidencial.</p>
+                    
+                    <h3>4. Protección de Datos</h3>
+                    <p>Implementamos una variedad de medidas de seguridad para mantener la seguridad de tu información personal. Utilizamos cifrado SSL para proteger los datos sensibles transmitidos en línea, y también protegemos tu información fuera de línea.</p>
+                    
+                    <h3>5. Tus Derechos</h3>
+                    <p>Tienes derecho a:
+                    <ul class="support-list">
+                        <li><i class="fas fa-check"></i> Acceder a la información personal que tenemos sobre ti</li>
+                        <li><i class="fas fa-check"></i> Solicitar la corrección de información inexacta</li>
+                        <li><i class="fas fa-check"></i> Solicitar la eliminación de tu información personal</li>
+                        <li><i class="fas fa-check"></i> Oponerte al procesamiento de tu información personal</li>
+                        <li><i class="fas fa-check"></i> Solicitar la transferencia de tus datos a otra organización</li>
+                    </ul>
+                    </p>
+                    
+                    <h3>6. Cookies y Tecnologías Similares</h3>
+                    <p>Utilizamos cookies y tecnologías similares para rastrear la actividad en nuestro servicio y mantener cierta información. Las cookies son archivos con una pequeña cantidad de datos que pueden incluir un identificador único anónimo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de autenticación -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Wander Store</h2>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="login">Iniciar Sesión</div>
+                <div class="tab" data-tab="register">Registrarse</div>
+            </div>
+            
+            <div id="login-tab" class="tab-content active">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Correo Electrónico</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Iniciar Sesión</button>
+                </form>
+                <div class="form-footer">
+                    ¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a>
+                </div>
+            </div>
+            
+            <div id="register-tab" class="tab-content">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Nombre Completo</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Correo Electrónico</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Contraseña</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirmar Contraseña</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Crear Cuenta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Wander Store</h3>
+                    <p>La plataforma líder en venta de cuentas de streaming premium a precios accesibles.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#productos" class="nav-link" data-section="productos">Netflix</a></li>
+                        <li><a href="#productos" class="nav-link" data-section="productos">Disney+</a></li>
+                        <li><a href="#productos" class="nav-link" data-section="productos">HBO Max</a></li>
+                        <li><a href="#productos" class="nav-link" data-section="productos">Spotify</a></li>
+                        <li><a href="#productos" class="nav-link" data-section="productos">YouTube Premium</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Soporte</h3>
+                    <ul>
+                        <li><a href="#soporte" class="nav-link" data-section="soporte">Centro de Ayuda</a></li>
+                        <li><a href="#soporte" class="nav-link" data-section="soporte">Preguntas Frecuentes</a></li>
+                        <li><a href="#soporte" class="nav-link" data-section="soporte">Contacto</a></li>
+                        <li><a href="#soporte" class="nav-link" data-section="soporte">Términos de Servicio</a></li>
+                        <li><a href="#soporte" class="nav-link" data-section="soporte">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Wander Store. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

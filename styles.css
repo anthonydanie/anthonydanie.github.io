@@ -1,0 +1,980 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #6a11cb;
+    --secondary: #2575fc;
+    --accent: #ff0055;
+    --dark: #1a1a2e;
+    --darker: #0f0f1e;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+}
+
+body {
+    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, #16213e 100%);
+    color: var(--light);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header y navegación */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--accent);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(255, 0, 85, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-actions a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: var(--accent);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.4);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 85, 0.6);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,85,0.2) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 0, 85, 0.7);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 0, 85, 0.9), 0 0 30px rgba(255, 0, 85, 0.6);
+    }
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ccc;
+}
+
+.points-display {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.points-display i {
+    color: gold;
+    font-size: 1.5rem;
+}
+
+/* Secciones */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent);
+}
+
+/* Productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.netflix { color: #e50914; }
+.disney { color: #113ccf; }
+.hbo { color: #821de0; }
+.max { color: #00a8e1; }
+.vix { color: #ff3d71; }
+.paramount { color: #0066ff; }
+.spotify { color: #1db954; }
+.youtube { color: #ff0000; }
+.crunchyroll { color: #f47521; }
+
+.netflix-logo {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #e50914;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: gold;
+}
+
+.product-price span {
+    font-size: 1rem;
+    color: var(--gray);
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+/* Página de detalles del producto */
+.product-detail {
+    padding: 100px 0;
+    display: none;
+}
+
+.product-detail.active {
+    display: block;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.product-image {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-image .product-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.netflix-logo-large {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 6rem;
+    color: #e50914;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.product-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.product-info .price-range {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.features-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.features-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.features-list i {
+    color: var(--accent);
+}
+
+.plan-selection {
+    margin: 30px 0;
+}
+
+.plan-selection h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.plan-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.plan-option {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.plan-option:hover {
+    border-color: var(--accent);
+}
+
+.plan-option.selected {
+    border-color: var(--accent);
+    background: rgba(255, 0, 85, 0.1);
+}
+
+.plan-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.plan-price {
+    color: gold;
+    font-weight: bold;
+}
+
+.final-price {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.final-price span {
+    color: gold;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* Sección de compra de puntos */
+.points-section {
+    padding: 100px 0;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.point-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.point-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.point-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
+}
+
+.point-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: gold;
+}
+
+.point-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.point-price {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.point-bonus {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+/* Sección de puntos personalizados */
+.custom-points {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.custom-points h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.custom-input-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.custom-input-group label {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.custom-input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.custom-input-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.custom-price {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.custom-price span {
+    color: gold;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.payment-methods {
+    margin-top: 40px;
+}
+
+.payment-methods h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-option:hover {
+    border-color: var(--accent);
+}
+
+.payment-option.selected {
+    border-color: var(--accent);
+    background: rgba(255, 0, 85, 0.1);
+}
+
+.payment-icon {
+    font-size: 2rem;
+}
+
+.payment-name {
+    font-size: 0.9rem;
+}
+
+.checkout-btn {
+    display: block;
+    margin: 40px auto 0;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+}
+
+/* Modal de autenticación */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--light);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+}
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.form-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab.active {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Secciones de soporte */
+.support-section {
+    padding: 100px 0;
+}
+
+.support-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.support-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.support-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.support-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-list li:last-child {
+    border-bottom: none;
+}
+
+.support-list i {
+    color: var(--accent);
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+    display: none;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.legal-content {
+    line-height: 1.8;
+}
+
+.legal-content h3 {
+    margin: 25px 0 15px;
+    color: var(--accent);
+}
+
+.legal-content p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.support-nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.support-nav .btn {
+    margin: 5px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px 0 20px;
+    border-top: 2px solid var(--accent);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .user-actions {
+        margin-top: 10px;
+    }
+    
+    .custom-input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .custom-input-group input {
+        width: 100%;
+    }
+    
+    .support-content {
+        padding: 20px;
+    }
+    
+    .detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-options {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .support-nav .btn {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .netflix-logo {
+        font-size: 2.8rem;
+    }
+    
+    .netflix-logo-large {
+        font-size: 4.5rem;
+    }
+}
