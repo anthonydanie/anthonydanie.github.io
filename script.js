@@ -165,13 +165,6 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
-// Formulario de contacto
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('¡Mensaje enviado! Nos pondremos en contacto contigo pronto.');
-    this.reset();
-});
-
 // Resto del código (autenticación, compra de puntos, etc.)
 // Modal de autenticación
 const authModal = document.getElementById('auth-modal');
